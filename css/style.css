@@ -1,9 +1,29 @@
-/**
-colors
-Ligth green: #7ed56f
-Medium green: #55f57a
-Dark green: #28b485
-*/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  80% {
+    transform: translateX(10px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  80% {
+    transform: translateX(-10px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  100% { } }
+
 * {
   margin: 0;
   padding: 0;
@@ -17,31 +37,8 @@ body {
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7;
-  color: #777777;
+  color: #777;
   padding: 3rem; }
-
-header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, #7ed56fc4, #28b485c2), url("./img/hero.jpg");
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative; }
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 3.5rem; }
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
 
 .heading-primary {
   color: #fff;
@@ -64,26 +61,6 @@ header {
   letter-spacing: 1.7rem;
   animation-name: moveInRight;
   animation-duration: 1s; }
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px); }
-  80% {
-    transform: translateX(10px); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100px); }
-  80% {
-    transform: translateX(-10px); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
 
 .btn:link,
 .btn:visited {
@@ -120,12 +97,6 @@ header {
   z-index: -1;
   transition: all 0.4s; }
 
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(30px); }
-  100% { } }
-
 .btn--white::after {
   background-color: #fff; }
 
@@ -136,3 +107,32 @@ header {
 .btn--animated {
   animation: moveInBottom 0.4s ease-out 0.75s;
   animation-fill-mode: backwards; }
+
+header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, #7ed56fc4, #28b485c2), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
+  header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+
+.header__logo {
+  height: 3.5rem; }
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+/**
+colors
+Ligth green: #7ed56f
+Medium green: #55f57a
+Dark green: #28b485
+*/
